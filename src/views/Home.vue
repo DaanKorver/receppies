@@ -7,14 +7,14 @@ import Recipe from '@/components/Recipe.vue'
   <Search />
   <h2>Welkom, Gebruiker</h2>
   <p>Hier zijn wat suggesties voor de eerst volgende keer koken.</p>
-  <main>
+  <div class="container">
     <Recipe />
     <Recipe />
     <Recipe />
     <Recipe />
     <Recipe />
     <Recipe />
-  </main>
+  </div>
 </template>
 
 <style scoped>
@@ -27,7 +27,7 @@ p {
   color: white;
 }
 
-main {
+.container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;

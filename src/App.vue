@@ -5,11 +5,29 @@ import Navigation from '@/components/Navigation.vue';
 
 <template>
   <Header />
-  <RouterView />
+    <RouterView  v-slot="{ Component, route }">
+      <transition name="fade" mode="out-in">
+        <main :key="route.name">
+          <component :is="Component"></component>
+        </main>
+      </transition>
+    </RouterView>
+  
   <Navigation />
 </template>
 
 <style>
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 
 :root {
   --dark: #1a1a1a;

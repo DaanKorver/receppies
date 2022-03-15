@@ -7,17 +7,17 @@ import Recipe from '@/components/Recipe.vue'
 <template>
   <Search />
   <Filter />
-  <main>
+  <div class="container">
     <Recipe />
     <Recipe />
     <Recipe />
     <Recipe />
     <Recipe />
-  </main>
+  </div>
 </template>
 
 <style scoped>
-main {
+.container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;

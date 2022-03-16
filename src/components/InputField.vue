@@ -5,7 +5,9 @@ const props = defineProps({
 })
 
 function getImage() {
-  return new URL(props.icon, import.meta.url)
+  const path = `../assets/${props.icon}`
+  const modules = import.meta.globEager('../assets/*.svg')
+  return modules[path].default
 }
 </script>
 

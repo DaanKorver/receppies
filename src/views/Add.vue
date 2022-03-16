@@ -7,9 +7,9 @@ import InputField from '@/components/InputField.vue';
   <p>
     Om een recept toe te voegen plak je de link in het vakje. Vervolgens mag je zelf bepalen welke categorieen bij het recept horen. Daarna kan je op de “Voeg toe” knop drukken om alles te bevestigen.
   </p>
-  <InputField :icon="'../assets/link.svg'" :placeholder="'Plak hier je link...'"/>
+  <InputField :icon="'link.svg'" :placeholder="'Plak hier je link...'"/>
   <div class="input-container">
-    <InputField :icon="'../assets/meat.svg'" :placeholder="'Voeg je categorie toe...'"/>
+    <InputField :icon="'meat.svg'" :placeholder="'Voeg je categorie toe...'"/>
     <button>+</button>
   </div>
   <button class="submit">Recept toevoegen</button>

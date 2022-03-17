@@ -59,13 +59,17 @@ body {
   font-family: 'Readex Pro';
   background: var(--dark);
   padding: 1em;
-  padding-bottom: 5.8em;
+  padding-bottom: 6.8em;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+main {
+  padding-top: 5em;
 }
 
 </style>

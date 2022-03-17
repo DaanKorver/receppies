@@ -18,6 +18,12 @@ import Navigation from '@/components/Navigation.vue';
 
 <style>
 
+html {
+  min-height: calc(100% + env(safe-area-inset-top));
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s ease;

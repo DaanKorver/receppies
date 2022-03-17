@@ -5,7 +5,7 @@ import Recipe from '@/components/Recipe.vue'
 
 <template>
   <Search />
-  <h2>Welkom, Gebruiker</h2>
+  <h2>Welkom, Daan</h2>
   <p>Hier zijn wat suggesties voor de eerst volgende keer koken.</p>
   <div class="container">
     <Recipe />

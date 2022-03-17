@@ -4,7 +4,7 @@ import Home from '@/views/Home.vue'
 import Search from '@/views/Search.vue'
 import Add from '@/views/Add.vue'
 import Info from '@/views/Info.vue'
-import Login from '@/view/Login.vue'
+import Login from '@/views/Login.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

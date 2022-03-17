@@ -9,12 +9,16 @@ function getImage() {
   const modules = import.meta.globEager('../assets/*.svg')
   return modules[path].default
 }
+
+function handleInput(e) {
+  this.$emit('input', this.content)
+}
 </script>
 
 <template>
   <div>
     <img :src="getImage()" alt="Icon">
-    <input type="text" :placeholder="placeholder">
+    <input @input="handleInput" type="text" :placeholder="placeholder">
   </div>
 </template>
 

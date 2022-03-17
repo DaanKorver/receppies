@@ -1,5 +1,5 @@
 <script setup>
-import InputField from '@/components/InputField.vue';
+import CustomInput from '@/components/CustomInput.vue';
 </script>
 
 <template>
@@ -7,9 +7,9 @@ import InputField from '@/components/InputField.vue';
   <p>
     Om een recept toe te voegen plak je de link in het vakje. Vervolgens mag je zelf bepalen welke categorieen bij het recept horen. Daarna kan je op de “Voeg toe” knop drukken om alles te bevestigen.
   </p>
-  <InputField :icon="'link.svg'" :placeholder="'Plak hier je link...'"/>
+  <CustomInput :icon="'link.svg'" :placeholder="'Plak hier je link...'"/>
   <div class="input-container">
-    <InputField :icon="'meat.svg'" :placeholder="'Voeg je categorie toe...'"/>
+    <CustomInput :icon="'meat.svg'" :placeholder="'Voeg je categorie toe...'"/>
     <button>+</button>
   </div>
   <button class="submit">Recept toevoegen</button>

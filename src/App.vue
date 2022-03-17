@@ -5,13 +5,16 @@ import Navigation from '@/components/Navigation.vue';
 
 <template>
   <Header />
-    <RouterView  v-slot="{ Component, route }">
+    <!-- <RouterView  v-slot="{ Component, route }">
       <transition name="fade" mode="out-in">
         <main :key="route.name">
           <component :is="Component"></component>
         </main>
       </transition>
-    </RouterView>
+    </RouterView> -->
+    <main>
+      <RouterView />
+    </main>
   
   <Navigation />
 </template>

@@ -2,7 +2,7 @@
   <nav>
     <ul>
       <li>
-        <RouterLink to="/" data-name="Home"><img src="@/assets/home.svg" alt="Home"></RouterLink>
+        <RouterLink to="/home" data-name="Home"><img src="@/assets/home.svg" alt="Home"></RouterLink>
       </li>
       <li>
         <RouterLink to="/search" data-name="Search"><img src="@/assets/search-green.svg" alt="Search"></RouterLink>

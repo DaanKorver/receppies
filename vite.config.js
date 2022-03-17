@@ -7,6 +7,7 @@ import { VitePWA } from "vite-plugin-pwa"
 export default defineConfig({
   plugins: [vue(), VitePWA(
     {
+      registerType: 'autoUpdate',
       manifest: {
         name: "Receppies app",
         short_name: "Receppies",

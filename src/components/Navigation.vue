@@ -25,7 +25,7 @@ nav {
   left: 0;
   right: 0;
   padding: .7em 0;
-  padding-bottom: 1.4em;
+  padding-bottom: 2.4em;
   border-top: 2px solid var(--gray);
 }
 

@@ -1,31 +1,22 @@
 <script setup>
 import Header from '@/components/Header.vue'
 import Navigation from '@/components/Navigation.vue';
+
 </script>
 
 <template>
   <Header />
-    <!-- <RouterView  v-slot="{ Component, route }">
+    <RouterView  v-slot="{ Component, route }">
       <transition name="fade" mode="out-in">
         <main :key="route.name">
           <component :is="Component"></component>
         </main>
       </transition>
-    </RouterView> -->
-    <main>
-      <RouterView />
-    </main>
-  
+    </RouterView>
   <Navigation />
 </template>
 
 <style>
-
-html {
-  min-height: calc(100% + env(safe-area-inset-top));
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-
-}
 
 .fade-enter-active,
 .fade-leave-active {

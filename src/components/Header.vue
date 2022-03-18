@@ -11,10 +11,10 @@ header {
   gap: 1em;
   color: var(--primary);
   margin-bottom: 1.4em;
-  position: fixed;
-  top: 0;
-  left: 0;
   padding: 1em;
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
   background-color: var(--dark);
   border-bottom: 2px solid var(--gray);

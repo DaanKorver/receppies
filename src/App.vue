@@ -1,7 +1,7 @@
 <script setup>
 import Header from '@/components/Header.vue'
-import Navigation from '@/components/Navigation.vue';
-
+import Navigation from '@/components/Navigation.vue'
+import { store } from './store'
 </script>
 
 <template>
@@ -13,7 +13,7 @@ import Navigation from '@/components/Navigation.vue';
         </main>
       </transition>
     </RouterView>
-  <Navigation />
+  <Navigation v-if="Object.keys(store.user).length !== 0"/>
 </template>
 
 <style>

@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { supabase } from '@/supabase.js'
 
 import Login from '@/views/Login.vue'
 import Home from '@/views/Home.vue'
@@ -22,24 +23,47 @@ const router = createRouter({
     {
       path: '/home',
       name: 'home',
-      component: Home
+      component: Home,
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/search',
       name: 'search',
-      component: Search
+      component: Search,
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/add',
       name: 'add',
-      component: Add
+      component: Add,
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/info',
       name: 'info',
-      component: Info
+      component: Info,
+      meta: {
+        requiresAuth: true
+      }
     }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  // get current user info
+  const currentUser = supabase.auth.user()
+  const requiresAuth = to.matched.some
+  (record => record.meta.requiresAuth)
+
+  if(requiresAuth && !currentUser) next('/')
+  else if(!requiresAuth && currentUser) next('/home')
+  else next();
 })
 
 export default router

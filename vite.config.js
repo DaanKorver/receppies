@@ -8,6 +8,9 @@ export default defineConfig({
   plugins: [vue(), VitePWA(
     {
       registerType: 'autoUpdate',
+      workbox: {
+        cleanupOutdatedCaches: true
+      },
       manifest: {
         name: "Receppies app",
         short_name: "Receppies",

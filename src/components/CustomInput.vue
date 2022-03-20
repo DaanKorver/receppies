@@ -1,24 +1,29 @@
 <script setup>
+import { defineEmits, ref } from 'vue';
+
 const props = defineProps({
   icon: String,
-  placeholder: String
+  placeholder: String,
+  type: {
+    type: String,
+    default: 'text'
+  }
 })
+
+const emit = defineEmits(['input'])
+const value = ref('')
 
 function getImage() {
   const path = `../assets/${props.icon}`
   const modules = import.meta.globEager('../assets/*.svg')
   return modules[path].default
 }
-
-function handleInput(e) {
-  this.$emit('input', this.content)
-}
 </script>
 
 <template>
   <div>
     <img :src="getImage()" alt="Icon">
-    <input @input="handleInput" type="text" :placeholder="placeholder">
+    <input :value="value" @input="emit('input', $event.target.value)" :type="type" :placeholder="placeholder">
   </div>
 </template>
 

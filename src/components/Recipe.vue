@@ -1,8 +1,20 @@
+<script setup>
+import { defineProps } from 'vue';
+
+defineProps({
+  title: String,
+  image: String,
+  prep: Number
+})
+
+</script>
+
 <template>
   <section>
-    <img src="@/assets/recipe_placeholder.webp" alt="Recipe">
-    <h3>Carrot Pancakes</h3>
-    <time><img src="@/assets/alarm-green.svg" alt="Alarm clock" />25 min.</time>
+    <img v-if="image" :src="image" alt="Recipe">
+    <img class="fallback" v-else src="@/assets/leaf.svg" alt="Leaf">
+    <h3>{{ title.length <= 20 ? title : `${title.substring(0, 20)}...` }}</h3>
+    <time><img src="@/assets/alarm-green.svg" alt="Alarm clock" />{{prep}} min.</time>
   </section>
 </template>
 
@@ -33,6 +45,14 @@ section > img {
   z-index: -1;
   top: 0;
   left: 0;
+}
+
+section > img.fallback {
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 time {

@@ -2,17 +2,22 @@
 import Search from '@/components/Search.vue'
 import Filter from '@/components/Filter.vue'
 import Recipe from '@/components/Recipe.vue'
+import { ref } from 'vue'
+import { getRecipes } from '../api.js';
+
+const recipes = ref([])
+
+getRecipes().then(data=>{
+  recipes.value = data
+})
+
 </script>
 
 <template>
   <Search />
-  <Filter />
+  <!-- <Filter /> -->
   <div class="container">
-    <Recipe />
-    <Recipe />
-    <Recipe />
-    <Recipe />
-    <Recipe />
+    <Recipe v-for="recipe in recipes" :key="recipe" :title="recipe.title" :image="recipe.image_url" :prep="recipe.prep_time" />
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <script setup>
 import CustomInput from '@/components/CustomInput.vue'
-import { supabase } from '@/supabase.js'
+import { supabase }  from './../supabase'
 import { ref } from 'vue'
 import { store } from '../store'
 import router from './../router'
